@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja de Roupas Cazuall</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style2.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,
+wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,
+wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Botão de menu -->
+  <button id="abrir-menu">☰ Login</button>
+
+  <!-- Menu lateral -->
+  <div id="menu-lateral" class="menu-fechado">
+    <button id="fechar-menu">✖</button>
+    <h3>Menu</h3>
+    <ul>
+      <li><a href="admin.html">🔒 Admin</a></li>
+    </ul>
+    <hr />
+    <h3>Login</h3>
+    <form id="form-login" onsubmit="return simularLogin(event)">
+      <input type="text" id="usuario" placeholder="Usuário" required /><br />
+      <input type="password" id="senha" placeholder="Senha" required /><br />
+      <button type="submit">Entrar</button>
+    </form>
+    <p id="mensagem-login" style="color: green;"></p>
+  </div>
+
+  <header>
+    <div class="Caixa">
+      <h1><img src="./Imagem/logo cazuall-Photoroom.png" alt="logo" /></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="home-icon"> 🏢 Home</a></li>
+          <li><a href="produtos.html" class="produtos">📦 Produtos</a></li>
+          <li><a href="contato.html" class="contatos">✉️ Contatos</a></li>
+          <li><a href="carrinho.html" class="carrinho">🛍️</a></li>
+          <li><a href="admin.html" class="admin"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="somos">
+      <img src="./Imagem/Quem somos- cazuall.jpeg" alt="Imagem quem somos" />
+    </section>
+
+    <section class="valores">
+      <h2 class="titulo-valores">Valores</h2>
+      <ul>
+        <li>Qualidade e Durabilidade</li>
+        <li>Inovação e Criatividade</li>
+        <li>Diversidade e Inclusão</li>
+      </ul>
+    </section>
+
+    <section class="missão">
+      <h1 class="titulo-missão">Missão</h1>
+      <p>
+        Revolucionar a experiência de compra de moda online, conectando clientes
+        a marcas e produtos que expressem sua individualidade, enquanto promovemos
+        práticas éticas e sustentáveis para o futuro da moda.
+      </p>
+      <img src="./Imagem/Imagem- Missão.jpeg" alt="" />
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>

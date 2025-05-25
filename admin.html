@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administração</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+
+ 
+    <header>
+        <div class="Caixa">
+            <h1><img src="./Imagem/logo cazuall-Photoroom.png" alt="logo"></h1>
+
+            <nav>
+                <ul>    
+
+                    <li><a href="index.html" class="home-icon"> 🏢 Home</a></li>
+                    <li> <a href="produtos.html" class="produtos">📦 Produtos</a> </li>
+                    <li> <a href="contato.html" class="contatos">✉️ Contatos</a> </li>
+                    <li> <a href="carrinho.html" class="carrinho">🛍️</a></li>
+                    <li><a href="admin.html" class="admin"></a></li>
+                    
+
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cadastro">
+        <h2>Administração de Produtos</h2>
+        <input type="text" id="novo-nome" placeholder="Nome do produto"><br>
+        <input type="text" id="nova-descricao" placeholder="Descrição do produto"><br>
+        <input type="number" id="novo-preco" placeholder="Preço"><br>
+        <input type="file" id="nova-imagem" accept="image/*"><br>
+        <button onclick="adicionarProduto()">Adicionar Produto</button>
+
+        <h3>Lista de Produtos</h3>
+        <ul id="lista-admin-produtos"></ul>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        // Função para adicionar um produto
+        function adicionarProduto() {
+            const nome = document.getElementById('novo-nome').value;
+            const descricao = document.getElementById('nova-descricao').value;
+            const preco = parseFloat(document.getElementById('novo-preco').value);
+            const imagemInput = document.getElementById('nova-imagem');
+            const imagemFile = imagemInput.files[0]; // Pega o arquivo de imagem
+
+            // Verificar se todos os campos estão preenchidos
+            if (!nome || !descricao || isNaN(preco) || !imagemFile) {
+                alert("Preencha todos os campos corretamente.");
+                return;
+            }
+
+            // Gerar uma URL temporária para a imagem (caso esteja local)
+            const imagemURL = URL.createObjectURL(imagemFile);
+
+            // Adicionar o produto ao array de produtos
+            produtos.push({
+                nome,
+                descricao,
+                preco,
+                imagem: imagemURL // URL da imagem para exibição
+            });
+
+            // Salvar produtos no localStorage
+            salvarProdutos();
+
+            // Limpar os campos após adicionar o produto
+            document.getElementById('novo-nome').value = '';
+            document.getElementById('nova-descricao').value = '';
+            document.getElementById('novo-preco').value = '';
+            imagemInput.value = ''; // Limpar o campo de imagem
+
+            // Atualizar a lista de produtos
+            atualizarListaAdmin();
+        }
+
+        // Função para atualizar a lista de produtos na administração
+        function atualizarListaAdmin() {
+            const lista = document.getElementById('lista-admin-produtos');
+            lista.innerHTML = ''; // Limpa a lista antes de exibir novamente
+
+            // Iterar sobre os produtos e criar a lista de produtos na aba admin
+            produtos.forEach((p, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${p.nome} - R$ ${p.preco.toFixed(2)}
+                    <img src="${p.imagem}" alt="${p.nome}" style="width: 50px; height: auto;">
+                    <button onclick="removerProduto(${index})">Remover</button>
+                `;
+                lista.appendChild(li);
+            });
+        }
+
+        // Função para remover produto da lista Admin
+        function removerProduto(index) {
+            // Confirmação antes de remover o produto
+            if (confirm("Deseja remover este produto?")) {
+                // Remover o produto do array de produtos
+                produtos.splice(index, 1);
+
+                // Salvar a lista de produtos atualizada no localStorage
+                salvarProdutos();
+
+                // Atualizar a lista de produtos na aba admin
+                atualizarListaAdmin();
+            }
+        }
+
+        // Salvar produtos no localStorage
+        function salvarProdutos() {
+            localStorage.setItem('produtos', JSON.stringify(produtos));
+        }
+
+        // Carregar produtos do localStorage
+        let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+
+        // Inicializar a lista de produtos ao carregar a página
+        atualizarListaAdmin();
+    </script>
+</body>
+
+</html>

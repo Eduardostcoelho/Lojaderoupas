@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="produtos.css">
+  <link rel="stylesheet" href="produtos2.css">
+  <link rel="stylesheet" href="reset.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,
+wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,
+wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="Caixa">
+      <h1><img src="./Imagem/logo cazuall-Photoroom.png" alt="logo"></h1>
+
+      <nav>
+        <ul>
+
+          <li><a href="index.html" class="home-icon"> 🏢 Home</a></li>
+          <li> <a href="produtos.html" class="produtos">📦 Produtos</a> </li>
+          <li> <a href="contato.html" class="contatos">✉️ Contatos</a> </li>
+          <li> <a href="carrinho.html" class="carrinho">🛍️</a></li>
+          <li><a href="admin.html" class="admin"></a></li>
+
+
+
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- Conteúdo da aba Produtos -->
+  <main class="produtos">
+    <h2>Nossos Produtos</h2>
+
+    <!-- Campo de busca opcional -->
+    <input type="text" id="filtro-produto" placeholder="Buscar produto..." oninput="exibirProdutos()">
+   <button onclick="adicionarAoCarrinho('${p.nome}', ${p.preco})">Adicionar ao Carrinho</button>
+
+    <!-- Local onde os produtos serão exibidos -->
+  <div id="lista-produtos"></div>
+  
+
+<script src="script.js"></script>
+<script src="produtos.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    window.produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+    exibirProdutos();
+  });
+  
+</script>
+
+</body>
+</html>

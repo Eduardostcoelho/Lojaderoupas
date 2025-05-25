@@ -1,0 +1,80 @@
+body {
+  background-image: url(./Imagem/Plamo\ de\ fundo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.produtos h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+#lista-produtos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.produto {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.produtos button{
+    
+    
+
+}
+
+.produto:hover {
+  transform: scale(1.03);
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.produto h3 {
+  font-size: 22px;
+  margin: 15px 0 10px;
+}
+
+.produto p {
+  font-size: 16px;
+  margin: 0 0;
+}
+
+.produto .preco {
+  font-weight: bold;
+  font-size: 18px;
+  color: #b12704;
+  margin: 10px 0;
+}
+
+.produto button {
+  background-color: #da5f32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.produto button:hover {
+  background-color: #b84c28;
+}

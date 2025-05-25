@@ -1,0 +1,100 @@
+
+body {
+  background-image: url(./Imagem/Plamo\ de\ fundo.png);
+  background-size:cover;
+  /* Ajusta a imagem para cobrir toda a tela */
+  background-position: center;
+  /* Centraliza a imagem */
+  background-repeat: no-repeat;
+  /* Evita repetição */
+  background-color: #f8b216;
+  
+}
+  
+
+
+
+header {
+    background: linear-gradient(#5227c2 1%, #f8b216 50%,#da5f32 );
+    height: 400px;
+}
+
+.Caixa {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+
+.carrinho{
+  display: inline-block;
+  font-size: 30px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carrinho:hover::after {
+  content: "Compras";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  white-space: nowrap;
+  opacity: 0;
+  animation: showText 0.3s forwards;
+}
+
+@keyframes showText {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+nav {
+    position: absolute;
+    /* posição do testo em relação a pagina*/
+    top: 180px;
+    /*alinhamento em relação ao tamanho da caixa*/
+    right: 0;
+    /* afastamento em relação a caixa*/
+
+
+}
+
+nav li {
+
+    display: inline;
+    /* lista fica na horizontal*/
+    margin: 0 0 0 15px;
+    /* afastamento do testo*/
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: lighter;
+    font-size: 22px;
+    text-decoration: none;
+    /* aparece o traço quando passa o mause*/
+
+}
+
+nav a:hover {
+    /* hover modificar algo interativo com o mause*/
+    color: red;
+    text-decoration: underline;
+
+}
+
+
+

@@ -1,0 +1,54 @@
+/* Estilos do menu retrátil */
+#abrir-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+#menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+#menu-lateral.menu-aberto {
+  transform: translateX(0);
+}
+
+#menu-lateral button,
+#menu-lateral input {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+}
+
+#menu-lateral a {
+  color: white;
+  text-decoration: none;
+}
+
+#fechar-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Adicione seus estilos principais aqui */
