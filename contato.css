@@ -1,0 +1,264 @@
+header {
+    background: linear-gradient(#9A1AE8, #f8b216, #f86816);
+}
+
+.Caixa {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+nav {
+    position: absolute;
+    /* posição do testo em relação a pagina*/
+    top: 180px;
+    /*alinhamento em relação ao tamanho da caixa*/
+    right: 0;
+    /* afastamento em relação a caixa*/
+
+
+}
+
+nav li {
+
+    display: inline;
+    /* lista fica na horizontal*/
+    margin: 0 0 0 15px;
+    /* afastamento do testo*/
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: lighter;
+    font-size: 22px;
+    text-decoration: none;
+    /* aparece o traço quando passa o mause*/
+
+}
+
+nav a:hover {
+    /* hover modificar algo interativo com o mause*/
+    color: red;
+    text-decoration: underline;
+
+}
+
+body {
+    background-color: #f86816;
+}
+
+
+main {
+    width: 1200px;
+    margin: 0 auto;
+
+}
+
+form {
+    margin: 40px 0;
+
+}
+
+
+form {
+    width: 70%;
+}
+
+
+form label,
+form legend {
+    display: block;
+    font-size: 20px;
+    margin: 0 0 15px;
+    
+}
+
+.text {
+    margin: 20px 0px 0px;
+}
+
+.text h2 {
+
+    margin: 30px 0 50px 0;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 10px 25px;
+}
+
+
+.mapa iframe {
+    width: 110%;
+    height: 80%;
+    margin: 0px 0px 25px 160px;
+    box-shadow: 4px 4px 4px 4px #000000;
+}
+
+.mapa h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: 40px 0px 40px 250px;
+}
+
+.imagemContato {
+    width: 100%;
+    height: auto;
+}
+
+.cor {
+    color: #ffffff;
+}
+
+
+.input-container input, 
+.input-container textarea {
+    width: 200%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos na largura total */
+}
+
+.input-container textarea {
+    resize: vertical;
+    /* Permite redimensionar verticalmente */
+    min-height: 80px;
+    /* Altura mínima para o textarea */
+    width: 166%;
+}
+
+.input-container label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background-color: #f86816;
+    /* Para cobrir um pouco a borda do input ao subir */
+    padding: 0 4px;
+    /* Pequeno padding para o background-color */
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+    /* Ajuste para dar espaço ao label flutuante */
+    width: 250px;
+}
+
+.input-container.active label {
+    top: -10px;
+    left: 5px;
+    font-size: 16px;
+    color: #000000;
+    border-radius: 2px;
+}
+
+.input-container input:focus+label+textarea,
+.input-container input:not(:placeholder-shown)+label+textarea {
+    top: -10px;
+    /* Move o label para cima */
+    /* ... outras propriedades de estilo ... */
+    border-radius: 4px;
+}
+
+/* Opcional: Estilo para quando o input está focado */
+.input-container input:focus,
+.input-container textarea:focus {
+    border-color: #000000;
+}
+
+/* Opcional: Esconde o placeholder padrão do input */
+.input-container input::placeholder {
+    color: transparent;
+}
+
+
+.inputs-padrao {
+    display: block;
+    margin: 0 0 6px;
+    padding: 10px 25px;
+    width: 100%;
+    background-color: #f86816;
+}
+
+textarea {
+    background-color: #f86816;
+}
+
+legend strong {
+    font-size: 25px;
+}
+
+.checkbox {
+    margin: 10px 0;
+
+}
+
+.radio {
+    cursor: pointer;
+}
+
+.enviar {
+    width: 85%;
+    padding: 10px 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 18px;
+    border: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: 1s;
+
+}
+
+.enviar:hover {
+    transform: scale(1.1);
+}
+
+.conteiner {
+    display: inline-flex;
+
+    width: 940px;
+}
+
+@media screen and (max-width:480px) {
+    .caixa {
+        width: auto;
+
+    }
+
+
+    h2 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .inputs-padrao {
+        width: 90%;
+    }
+
+    .mapa {
+        width: auto;
+
+    }
+
+
+}
