@@ -1,0 +1,127 @@
+
+header {
+     background: linear-gradient(#9A1AE8 1%, #f8b216 50%,#f86816 );
+}
+.Caixa {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+nav {
+    position: absolute;
+    top: 180px;
+    right: 0;
+
+
+}
+
+nav li {
+
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: black;
+    font-weight: lighter;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+nav a:hover {
+    color: #000;
+    text-decoration: underline;
+
+}
+
+
+.produtos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;                                                                                                                                                                                                                                                 
+
+}
+
+.produtos li{
+     text-align: center;
+     width: 28%;
+     padding: 30px 20px;
+     box-sizing: border-box;
+     border-radius: 10px;
+}
+
+
+.produtos img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.produtos h2{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.produtos h2:hover{
+    font-size: 34px;
+}
+
+
+  
+
+
+
+.descricao-produto {
+    display: none;
+    line-height:  1.6em;
+    margin-top: 10px;
+    color: #000;
+    background-color:rgba(255, 250, 240, 0.226);
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px #f8b1168c(0, 0, 0, 0.719);
+    padding: 1px;
+    font-size: 16px;
+     font-family: "Alice", serif;
+     font-weight: 400;
+     font-style: normal;
+     line-height: 1.6;
+     margin-bottom: 20px;
+}
+/*.descricao-produto {
+    
+    line-height: 1.6;
+    background-color: #fdf8f3;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(238, 3, 3, 0.801);
+    }*/
+
+.descricao-produto p {
+    margin-bottom: 8px;
+  }
+
+
+.produtos-preco{
+    margin-top: 10px;
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+
+
