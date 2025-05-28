@@ -104,7 +104,7 @@ nav a:hover {
 
 main {
 
-    background: rgba(52, 152, 219, 0.5); /* Cor com transparência */
+    background: #DA5F32(52, 152, 219, 0.5); /* Cor com transparência */
     background-image: url('imagem.png');
     background-blend-mode: multiply; /* Mistura cor e imagem */
 }
@@ -150,6 +150,7 @@ main {
 .missão img {
   width: 940px;
   margin: 100px auto;
+  text-align: center;
   display: block;
   margin: 20px auto;
 }

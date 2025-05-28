@@ -5,8 +5,8 @@ body {
   background-repeat: no-repeat;
   font-family: 'Montserrat', sans-serif;
   color: #000;
-  margin: 0;
-  background-color: #da5f32;
+  margin: 0;  
+  background: linear-gradient(#da5f32 35%, #f8b216 68%,#5227c2 );
 }
 
 .produtos h2 {

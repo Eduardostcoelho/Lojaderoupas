@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="admin.css"> <!-- opcional -->
+</head>
+<body>
+  <h1>Cadastro de Novo Cliente</h1>
+
+  <form id="formCadastro">
+    <label>Nome:</label><br>
+    <input type="text" id="nome" required><br><br>
+
+     <label>CPF:</label><br>
+    <input type="text" id="nome" required><br><br>
+
+     <label>Endereço:</label><br>
+    <input type="text" id="nome" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <label>Senha:</label><br>
+    <input type="password" id="senha" required><br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script>
+    document.getElementById('formCadastro').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      const cliente = { nome, email, senha };
+
+      let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+      clientes.push(cliente);
+      localStorage.setItem('clientes', JSON.stringify(clientes));
+
+      alert('Cadastro realizado com sucesso!');
+      window.location.href = 'carrinho.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <h1>Login de Cliente</h1>
+
+  <form id="formLogin">
+    <label>Email:</label><br>
+    <input type="email" id="email"><br><br>
+
+    <label>Senha:</label><br>
+    <input type="password" id="senha"><br><br>
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+
+      const clienteEncontrado = clientes.find(c => c.email === email && c.senha === senha);
+
+      if (clienteEncontrado) {
+        localStorage.setItem('usuarioAtual', clienteEncontrado.nome);
+        alert(`Bem-vindo(a), ${clienteEncontrado.nome}`);
+        window.location.href = 'carrinho.html';
+      } else {
+        alert('Email ou senha incorretos.');
+      }
+    });
+  </script>
+</body>
+</html>

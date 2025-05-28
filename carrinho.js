@@ -200,3 +200,17 @@ function mostrarNotificacao(mensagem) {
     notificacao.style.opacity = '0';
   }, 2500);
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const botaoMenu = document.getElementById('botaoMenu');
+  const menuDropdown = document.getElementById('menuDropdown');
+
+  botaoMenu.addEventListener('click', () => {
+    menuDropdown.style.display = menuDropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (!botaoMenu.contains(e.target) && !menuDropdown.contains(e.target)) {
+      menuDropdown.style.display = 'none';
+    }
+  });
+});

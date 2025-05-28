@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>carrinho</title>
   <link rel="stylesheet" href="carrinho.css">
   <link rel="stylesheet" href="reset.css">
 </head>
+
 <body>
-  
-    <header>
-        <div class="Caixa">
-            <h1><img src="./Imagem/logo cazuall-Photoroom.png" alt="logo"></h1>
 
-            <nav>
-                <ul>    
+  <header>
+    <div class="Caixa">
+      <h1><img src="./Imagem/logo cazuall-Photoroom.png" alt="logo"></h1>
 
-                    <li><a href="index.html" class="home-icon"> 🏢 Home</a></li>
-                    <li><a href="produtos3.html">Coleção</a></li>
-                    <li> <a href="produtos.html" class="produtos">📦 Loja</a> </li>
-                    <li> <a href="Contatos.html" class="contatos">✉️ Contatos</a> </li>
-                    <li> <a href="carrinho.html" class="carrinho">🛍️</a></li>
-                    <li><a href="admin.html" class="admin"></a></li>
-                    
+      <nav>
+        <ul>
 
-
-
-                </ul>
-            </nav>
-        </div>
-    </header>
+          <li><a href="index.html" class="home-icon"> 🏢 Home</a></li>
+          <li><a href="produtos3.html">Coleção</a></li>
+          <li> <a href="produtos.html" class="produtos">📦 Loja</a> </li>
+          <li> <a href="Contatos.html" class="contatos">✉️ Contatos</a> </li>
+          <li> <a href="carrinho.html" class="carrinho">🛍️</a></li>
+          <li><a href="admin.html" class="admin"></a></li>
 
 
 
 
-    <div class="nota-fiscal">
-    
-      <h1>Loja de Roupas Cazuall</h1>
-      <p>CNPJ: 12.345.678/0001-90</p>
-      <p>Endereço: - São Paulo, SP</p>
-      <p>Telefone: (11) 99999-8888</p>
-      <hr />
-    
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="menu-gaveta">
+    <button id="botaoMenu">👤Login</button>
+    <div id="menuDropdown" class="menu-conteudo">
+      <a href="login.html">🔐 Já sou cliente</a>
+      <a href="cadastro.html">📝 Cadastrar novo cliente</a>
+    </div>
+  </div>
+
+
+
+
+  <div class="nota-fiscal">
+
+    <h1>Loja de Roupas Cazuall</h1>
+    <p>CNPJ: 12.345.678/0001-90</p>
+    <p>Endereço: - São Paulo, SP</p>
+    <p>Telefone: (11) 99999-8888</p>
+    <hr />
+
 
     <section>
       <h3>Itens da Nota Fiscal</h3>
@@ -63,31 +73,30 @@
     </section>
 
     <section id="form-pagamento">
-  <h3>Método de Pagamento</h3>
-  <form id="formPagamento">
-    <label><input type="radio" name="metodoPagamento" value="debito" checked> Débito</label><br>
-    <label><input type="radio" name="metodoPagamento" value="credito"> Crédito</label><br>
-    <label><input type="radio" name="metodoPagamento" value="pix"> Pix</label><br><br>
+      <h3>Método de Pagamento</h3>
+      <form id="formPagamento">
+        <label><input type="radio" name="metodoPagamento" value="debito" checked> Débito</label><br>
+        <label><input type="radio" name="metodoPagamento" value="credito"> Crédito</label><br>
+        <label><input type="radio" name="metodoPagamento" value="pix"> Pix</label><br><br>
 
-    <div id="campoCartao" style="display: none;">
-      <input type="text" id="nome-cartao" placeholder="Nome no Cartão" /><br>
-      <input type="text" id="numero-cartao" placeholder="Número do Cartão" /><br>
-      <input type="text" id="validade-cartao" placeholder="Validade do Cartão" /><br>
-    </div>
+        <div id="campoCartao" style="display: none;">
+          <input type="text" id="nome-cartao" placeholder="Nome no Cartão" /><br>
+          <input type="text" id="numero-cartao" placeholder="Número do Cartão" /><br>
+          <input type="text" id="validade-cartao" placeholder="Validade do Cartão" /><br>
+        </div>
 
-    <button type="button" onclick="simularPagamento()">Finalizar Compra</button>
-  </form>
-</section>
+        <button type="button" onclick="simularPagamento()">Finalizar Compra</button>
+      </form>
+    </section>
+
+   
 
 
     <div id="mensagem-finalizacao"></div>
-<h1>Cliente:</h1>
-      <p>Nome: </p>
-      <p>Endereço: </p>
-      <p>Telefone: (11) 99999-8888</p>
+
     <footer>
 
-      
+
       <p>Obrigado por comprar com a Cazuall!</p>
     </footer>
   </div>
@@ -95,4 +104,5 @@
   <script src="carrinho.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
