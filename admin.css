@@ -1,4 +1,3 @@
-
 body {
   background-image: url(./Imagem/Plamo\ de\ fundo.png);
   background-size:cover;
@@ -98,3 +97,120 @@ nav a:hover {
 
 
 
+/* Fonte padrão */
+body, h1, h2, h3, p, a, li, input, button, label {
+  font-family: 'Alice', serif;
+}
+
+/* Formulários modernos */
+form {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input script{
+  width: 30%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input:focus {
+  border-color: #5227c2;
+  outline: none;
+}
+
+/* Botão com estilo moderno */
+button script{
+  background: linear-gradient(135deg, #5227c2, #da5f32);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 30%;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #3a1d8a, #b44424);
+  transform: translateY(-2px);
+}
+
+/* Responsividade para formulários */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+
+/* Estilo moderno para o formulário da aba Admin */
+.cadastro {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro h2, .cadastro h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cadastro input[type="text"],
+.cadastro input[type="number"],
+.cadastro input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.cadastro button {
+  background: linear-gradient(135deg, #5227c2, #da5f32);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+}
+
+.cadastro button:hover {
+  background: linear-gradient(135deg, #3a1d8a, #b44424);
+  transform: translateY(-2px);
+}
+
+#lista-admin-produtos li {
+  background: #f1f1f1;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  list-style: none;
+  font-size: 16px;
+}

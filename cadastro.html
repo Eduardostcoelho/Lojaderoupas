@@ -1,6 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<meta name="description" content="Cadastre-se na Loja Cazuall para aproveitar ofertas e comprar com mais facilidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Alice', serif;
+    background: linear-gradient(to right, #f8b216, #da5f32);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  form {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  input:focus {
+    border-color: #5227c2;
+    outline: none;
+  }
+  button {
+    background: linear-gradient(135deg, #5227c2, #da5f32);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+  }
+  button:hover {
+    background: linear-gradient(135deg, #3a1d8a, #b44424);
+    transform: translateY(-2px);
+  }
+</style>
+
   <meta charset="UTF-8">
   <title>Cadastro de Cliente</title>
   <link rel="stylesheet" href="reset.css">
@@ -11,10 +75,10 @@
 
   <form id="formCadastro">
     <label>Nome:</label><br>
-    <input type="text" id="nome" required><br><br>
+    <input type="text" id="cpf" required><br><br>
 
      <label>CPF:</label><br>
-    <input type="text" id="nome" required><br><br>
+    <input type="text" id="endereco" required><br><br>
 
      <label>Endereço:</label><br>
     <input type="text" id="nome" required><br><br>

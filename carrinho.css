@@ -202,3 +202,61 @@ footer {
 .menu-conteudo a:hover {
   background-color: #f1f1f1;
 }
+
+
+
+/* Fonte Alice aplicada globalmente */
+body, h1, h2, h3, p, a, li, input, button, label, td, th {
+  font-family: 'Alice', serif;
+}
+
+/* Responsividade para carrinho */
+@media (max-width: 768px) {
+  .Caixa {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  nav {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .nota-fiscal {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .tabela-itens th,
+  .tabela-itens td {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  #campoCartao input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #formPagamento {
+    text-align: center;
+  }
+}
+
+/* Botões com estilo mais moderno */
+button {
+  font-family: 'Alice', serif;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #5227c2;
+  color: white;
+}

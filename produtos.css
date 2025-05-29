@@ -91,3 +91,29 @@ nav a:hover {
     text-decoration: underline;
 
 }
+
+
+/* Fonte Alice */
+body, h1, h2, h3, p, a, li, input, button {
+  font-family: 'Alice', serif;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .Caixa {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  nav {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .carrinho {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

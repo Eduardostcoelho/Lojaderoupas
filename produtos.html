@@ -54,14 +54,17 @@ wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <div id="lista-produtos"></div>
   
 
+<!-- Scripts -->
 <script src="script.js"></script>
 <script src="produtos.js"></script>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('usuarioAtual')) {
+      localStorage.setItem('usuarioAtual', 'Visitante');
+    }
     window.produtos = JSON.parse(localStorage.getItem('produtos')) || [];
     exibirProdutos();
   });
-  
 </script>
 
 </body>

@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Alice', serif;
   color: #000;
   margin: 0;  
   background: linear-gradient(#da5f32 35%, #f8b216 68%,#5227c2 );
@@ -78,4 +78,37 @@ body {
 
 .produto button:hover {
   background-color: #b84c28;
+}
+
+
+/* Melhor responsividade para produtos */
+@media (max-width: 768px) {
+  .produto {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #lista-produtos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#filtro-produto {
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.titulo-loja {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+  color: #333;
 }
